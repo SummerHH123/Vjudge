@@ -1,5 +1,7 @@
 package 基础题1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -13,8 +15,12 @@ public class _G_ASCII {
         for (int i=0;i<n;i++){
             a[i]=sc.nextInt();
         }
-        for (int i =0;i<n;i++) {
-            System.out.println(a[i]);
+        List<Character> li=new ArrayList<>();
+       for (int i=0;i<n;i++){
+           li.add((char)a[i]);
+       }
+        for (Character character : li) {
+            System.out.print(character);
         }
 
     }
