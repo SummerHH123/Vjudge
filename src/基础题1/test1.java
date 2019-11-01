@@ -4,19 +4,26 @@ import java.util.Scanner;
 
 public class test1 {
     public static void main(String[] args) {
-        Scanner sc =new Scanner(System.in);
-        while (sc.hasNext()){
-//            String a=sc.next();
-//            String b=sc.next();
-//            int res_a=Integer.parseInt(a,16);
-////            System.out.println(res_a);
-//            int res_b=Integer.parseInt(b,16);
-//            int res = res_a + res_b;
-//            System.out.println(res);
-            int a=sc.nextInt();
-            System.out.println(a%10);
-
-
+        Scanner cin=new Scanner(System.in);
+        int t=cin.nextInt();
+        while(t-->0)
+        {
+            char c=cin.next().charAt(0);
+            int a=cin.nextInt();
+            int b=cin.nextInt();
+            if(c=='+')System.out.print(a+b);
+            else if(c=='-')System.out.print(a-b);
+            else if(c=='*')System.out.print(a*b);
+            else if(c=='/')
+            {
+                if(a%b==0)
+                    System.out.print(a/b);
+                else
+                    System.out.printf("%.2f",(float)a/b);
+            }
+            System.out.println();
         }
+
+
     }
 }
