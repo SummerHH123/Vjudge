@@ -4,25 +4,28 @@ import java.util.Scanner;
 
 public class test1 {
     public static void main(String[] args) {
-        Scanner cin=new Scanner(System.in);
-        int t=cin.nextInt();
-        while(t-->0)
-        {
-            char c=cin.next().charAt(0);
-            int a=cin.nextInt();
-            int b=cin.nextInt();
-            if(c=='+')System.out.print(a+b);
-            else if(c=='-')System.out.print(a-b);
-            else if(c=='*')System.out.print(a*b);
-            else if(c=='/')
-            {
-                if(a%b==0)
-                    System.out.print(a/b);
-                else
-                    System.out.printf("%.2f",(float)a/b);
-            }
-            System.out.println();
+        String sentence = "\u03C0\uD835\uDD6B";
+       int lengthU = sentence.length();
+        int lengthP = sentence.codePointCount(0, lengthU);
+        int[] a=sentence.codePoints().toArray();
+        String s=new String(a,0,a.length);
+        for (int i : a) {
+            System.out.println(i);
         }
+
+
+
+        System.out.println(s.codePointAt(1));
+        System.out.println(a.length);
+        System.out.println(s);
+        System.out.println(a);
+        System.out.println(lengthU);        // 4个code units
+        System.out.println(lengthP);        // 3个code points
+        System.out.println(sentence);
+
+        int i = sentence.codePointAt(1);    // i=2 true  i=0,1,3 false  i=4 out of bound
+        boolean b = Character.isSupplementaryCodePoint(i);
+        System.out.println(b);
 
 
     }
