@@ -14,6 +14,7 @@ public class java_input {
         String s1 = st.nextToken();
 
         System.out.println(s1);
+        System.out.println();
 
 
     }
