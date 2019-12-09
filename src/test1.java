@@ -9,5 +9,6 @@ public class test1 {
 
         String b=a;
         System.out.println(b);
+
     }
 }
